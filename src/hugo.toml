@@ -5,7 +5,7 @@ theme                  = "hugo-theme-stack"
 defaultContentLanguage = "en"
 hasCJKLanguage         = false
 
-# Sources live in src/, generated site goes to ../blog
+# Sources live in src/, generated site goes to ../docs
 publishDir = "../docs"
 
 [pagination]
@@ -40,6 +40,10 @@ publishDir = "../docs"
 
     [params.comments]
         enabled = false
+
+    [params.colorScheme]
+        toggle  = true
+        default = "dark"
 
 [markup.goldmark.renderer]
     unsafe = true
