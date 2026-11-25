@@ -1,0 +1,45 @@
+baseURL                = "https://blog.ganttproject.cloud/"
+locale                 = "en-us"
+title                  = "GanttProject Cloud Blog"
+theme                  = "hugo-theme-stack"
+defaultContentLanguage = "en"
+hasCJKLanguage         = false
+
+# Sources live in src/, generated site goes to ../blog
+publishDir = "../blog"
+
+[pagination]
+    pagerSize = 10
+
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"
+
+[params]
+    mainSections   = ["post"]
+    rssFullContent = true
+
+    [params.footer]
+        since = 2026
+
+    [params.sidebar]
+        subtitle = "News and updates"
+
+    [params.article]
+        toc          = true
+        readingTime  = true
+
+    [params.widgets]
+        homepage = [
+            { type = "search" },
+            { type = "archives", params = { limit = 5 } },
+            { type = "categories", params = { limit = 10 } },
+            { type = "tag-cloud", params = { limit = 10 } },
+        ]
+        page = [{ type = "toc" }]
+
+    [params.comments]
+        enabled = false
+
+[markup.goldmark.renderer]
+    unsafe = true
