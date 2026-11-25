@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 hasCJKLanguage         = false
 
 # Sources live in src/, generated site goes to ../blog
-publishDir = "../blog"
+publishDir = "../docs"
 
 [pagination]
     pagerSize = 10
