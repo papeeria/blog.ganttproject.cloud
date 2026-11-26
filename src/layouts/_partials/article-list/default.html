@@ -1,0 +1,13 @@
+{{/* Override of the theme's list card: adds an excerpt of the post below the header.
+     The excerpt is Hugo's .Summary: the content before <!--more--> if present,
+     the `summary` front matter field if set, or else the first ~summaryLength words. */}}
+{{ $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) }}
+<article class="{{ if $image }}has-image{{ end }}">
+    {{ partial "article/components/header" (dict "Page" . "IsList" true) }}
+    {{ with .Summary }}
+    <section class="article-excerpt">
+        {{ . }}
+        {{ if $.Truncated }}<a class="article-excerpt-more" href="{{ $.RelPermalink }}">Read more →</a>{{ end }}
+    </section>
+    {{ end }}
+</article>

@@ -1,0 +1,48 @@
+/* Description under the post title: smaller than the theme default (1.75rem / 2rem)
+   so it reads as secondary to the title. */
+.article-subtitle {
+    font-size: 1.5rem;
+    @include respond(xl) {
+        font-size: 1.6rem;
+    }
+}
+
+/* Excerpt of the post content shown on list pages. */
+.article-excerpt {
+    padding: 0 var(--card-padding) var(--card-padding);
+    margin-top: calc(-1 * var(--spacing-md));
+    font-family: var(--article-font-family);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--card-text-color-main);
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    p, ul, ol {
+        margin: 0 0 1em;
+    }
+
+    ul, ol {
+        padding-left: 1.5em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.6rem;
+        margin: 0 0 0.5em;
+    }
+
+    img {
+        display: none;
+    }
+
+    a {
+        color: var(--accent-color);
+    }
+
+    .article-excerpt-more {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
